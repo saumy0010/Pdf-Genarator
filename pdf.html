@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>PDF Generator</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.2/pdfmake.min.js" integrity="sha512-Yf733gmgLgGUo+VfWq4r5HAEaxftvuTes86bKvwTpqOY3oH0hHKtX/9FfKYUcpaxeBJxeXvcN4EY3J6fnmc9cA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.2/vfs_fonts.js" integrity="sha512-cktKDgjEiIkPVHYbn8bh/FEyYxmt4JDJJjOCu5/FQAkW4bc911XtKYValiyzBiJigjVEvrIAyQFEbRJZyDA1wQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="ol-sm-12" id="anmi">
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+            <lottie-player src="https://assets8.lottiefiles.com/private_files/lf30_tfozcvfo.json" background="transparent" speed="1" style="width: 100%; height: 300px; text-align:center" loop autoplay></lottie-player>
+        </div>
+        <div class="col-sm-12" id="box">
+            <input id="name" type="text" placeholder="Name" required>
+            <br><br>
+            <button type="submit" id="btn" onclick="pdf()">Submit</button>
+            <br><br>
+        </div>
+    </div>
+
+
+</body>
+<script>
+    function pdf() {
+        var name = document.getElementById('name').value;
+        var docDefinition = {
+            content: [
+                'My Name is: ' + name
+            ]
+        };
+        pdfMake.createPdf(docDefinition).download();
+    }
+</script>
+
+</html>

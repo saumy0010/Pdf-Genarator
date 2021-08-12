@@ -1,0 +1,46 @@
+body {
+    text-align: center;
+}
+
+#box {
+    margin-top: 100px;
+}
+
+#name {
+    width: 250px;
+    height: 40px;
+    font-size: x-large;
+    font-style: inherit;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border: 2px solid #FFC0CB;
+    border-radius: 12px;
+    padding-left: 10px;
+}
+
+button {
+    width: 90px;
+    height: 30px;
+    border: 0;
+    position: relative;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+#btn {
+    background-color: #669999;
+    color: white;
+}
+
+#btn:hover {
+    background-color: #a3c2c2;
+    color: white;
+    width: 95px;
+    transition: all 0.2s;
+}
+
+#anmi {
+    box-shadow: 0 5px 10px #efefef;
+    border-radius: 6px;
+}
